@@ -69,6 +69,7 @@ fn main() {
     println!("returned valeu {}", returned_value.0);
 
     random();
+    match_practice();
 }
 
 fn one(the_name: String, sub1: i32, sub2: i32) -> Student
@@ -126,4 +127,16 @@ fn random()
     let range = rand_number.gen_range(100,1000);
 
     println!("Some random number between 100 & 1000 range is: {}", range);
+}
+
+fn match_practice()
+{
+    let some = 30;
+
+    match some
+    {
+        10 => println!("No Match"),
+        30 => println!("Perfect Match"),
+        _=>println!("No occurences")
+    }
 }
