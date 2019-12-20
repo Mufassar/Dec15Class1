@@ -1,3 +1,5 @@
+use rand::Rng;
+
 #[derive(Debug)]
 struct Student 
 {
@@ -65,6 +67,8 @@ fn main() {
     let returned_value = multiply(10,20);
 
     println!("returned valeu {}", returned_value.0);
+
+    random();
 }
 
 fn one(the_name: String, sub1: i32, sub2: i32) -> Student
@@ -110,3 +114,16 @@ fn multiply(num1: u32, num2: u32) -> (String, String, u32,Student)//function def
 
 
 //Random, Github, Match
+fn random()
+{
+    let mut rand_number = rand::thread_rng();
+
+    let n1: u8 = rand_number.gen();
+    let n2: u16 = rand_number.gen();
+    
+    println!("8 bytes random no: {} & 16 bytes random no:{}", n1, n2);
+
+    let range = rand_number.gen_range(100,1000);
+
+    println!("Some random number between 100 & 1000 range is: {}", range);
+}
